@@ -1,4 +1,4 @@
-;(function(define, _win) { 'use strict'; define( 'name', [ 'JC.BaseMVC' ], function(){
+;(function(define, _win) { 'use strict'; define( 'name', [ 'V.BaseMVC' ], function(){
 });}( typeof define === 'function' && define.amd ? define : 
         function ( _name, _require, _cb ) { 
             typeof _name == 'function' && ( _cb = _name );
@@ -10,7 +10,7 @@
 );
 
 
-;(function(define, _win) { 'use strict'; define( 'name', [ 'JC.common' ], function(){
+;(function(define, _win) { 'use strict'; define( 'name', [ 'V.common' ], function(){
 });}( typeof define === 'function' && define.amd ? define : 
         function ( _name, _require, _cb ) { 
             typeof _name == 'function' && ( _cb = _name );
@@ -23,16 +23,16 @@
 
 
     /**
-     * 这个判断是为了向后兼容 JC 0.1
+     * 这个判断是为了向后兼容 V 0.1
      * 使用 requirejs 的项目可以移除这段判断代码
      */
-    JC.use 
-        && JC.PATH
-        && JC.use([ 
-                JC.PATH + 'comps/Panel/Panel.default.js'
-                , JC.PATH + 'comps/Panel/Panel.popup.js' 
-                , JC.PATH + 'comps/Panel/Dialog.js' 
-                , JC.PATH + 'comps/Panel/Dialog.popup.js' 
+    V.use 
+        && V.PATH
+        && V.use([ 
+                V.PATH + 'comps/Panel/Panel.default.js'
+                , V.PATH + 'comps/Panel/Panel.popup.js' 
+                , V.PATH + 'comps/Panel/Dialog.js' 
+                , V.PATH + 'comps/Panel/Dialog.popup.js' 
             ].join())
         ;
 
