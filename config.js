@@ -10,8 +10,8 @@ requirejs.config( {
     baseUrl: DC.PATH
     , urlArgs: 'v=' + new Date().getTime() 
     , paths: {
-        'jquery': 'modules/jquery/1.9.1/jquery'
-        , 'json2': 'modules/json/2/json2'
+        'json2': 'modules/json/2/json2'
+        //, 'jquery': 'modules/jquery/1.9.1/jquery'
         , 'underscore': 'modules/underscore/1.8.3/underscore'
         , 'backbone': 'modules/backbone/1.1.2/backbone'
         , 'd3': 'modules/d3/3.5.5/d3'
