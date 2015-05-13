@@ -1,5 +1,8 @@
-;(function(define, _win) { 'use strict'; define( 'dcommon'
-    , [ 'vcommon', 'd3' ], function(){
+;(function(define, _win) { 'use strict'; define( 'vcommon'
+    , [ 'json2', 'underscore', 'backbone', 'V.log' ], function( json, _, b, log ){
+
+    window.V = window.V || {};
+    V.log = log;
 
 });}( typeof define === 'function' && define.amd ? define : 
         function ( _name, _require, _cb ) { 

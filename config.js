@@ -1,23 +1,42 @@
 ;(function(){
-window.DC = window.DC|| {log:function(){}};
-DC.PATH = DC.PATH || scriptPath();
+window.V = window.V|| {};
+V.PATH = V.PATH || scriptPath();
 /**
- * requirejs config.js for DC Chart Project
+ * requirejs config.js for V Chart Project
  */
 
 window.requirejs && 
 requirejs.config( {
-    baseUrl: DC.PATH
+    baseUrl: V.PATH
     , urlArgs: 'v=' + new Date().getTime() 
     , paths: {
-        'json2': 'modules/json/2/json2'
+        json2: 'modules/json/2/json2'
         //, 'jquery': 'modules/jquery/1.9.1/jquery'
-        , 'underscore': 'modules/underscore/1.8.3/underscore'
-        , 'backbone': 'modules/backbone/1.1.2/backbone'
-        , 'd3': 'modules/d3/3.5.5/d3'
-        , 'dcommon': 'modules/dcommon/0.1/dcommon'
+        , underscore: 'modules/underscore/1.8.3/underscore'
+        , backbone: 'modules/backbone/1.1.2/backbone'
+        , d3: 'modules/d3/3.5.5/d3'
 
-        , 'dtmp': 'modules/dtmp/0.1/dtmp'
+        , 'V.log': 'modules/v.log/0.1/v.log'
+        , 'V.delay': 'modules/v.delay/0.1/v.delay'
+
+        , vcommon: 'modules/vcommon/0.1/vcommon'
+        , dcommon: 'modules/dcommon/0.1/dcommon'
+
+        , dtmp: 'modules/dtmp/0.1/dtmp'
+    }
+
+    , shim: {
+        underscore: {
+            exports: "_"
+        }
+        , backbone: {
+            deps: ['underscore']
+            , exports: 'Backbone'
+        }
+        , d3: {
+            exports: 'd3'
+        }
+
     }
 });
 
