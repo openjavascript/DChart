@@ -1,6 +1,5 @@
-;(function(define, _win) { 'use strict'; define( 'dcommon'
-    , [ 'underscore', 'backbone', 'd3' ], function(){
-
+;(function(define, _win) { 'use strict'; define( 'dtmp'
+    , [ 'dcommon' ], function(){
 });}( typeof define === 'function' && define.amd ? define : 
         function ( _name, _require, _cb ) { 
             typeof _name == 'function' && ( _cb = _name );

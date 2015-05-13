@@ -15,6 +15,8 @@ requirejs.config( {
         , 'backbone': 'modules/backbone/1.1.2/backbone'
         , 'd3': 'modules/d3/3.5.5/d3'
         , 'dcommon': 'modules/dcommon/0.1/dcommon'
+
+        , 'dtmp': 'modules/dtmp/0.1/dtmp'
     }
 });
 
