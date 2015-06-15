@@ -20,7 +20,6 @@ requirejs.config( {
         , 'V.delay': 'modules/v.delay/0.1/v.delay'
 
         , vcommon: 'modules/vcommon/0.1/vcommon'
-        , dcommon: 'modules/dcommon/0.1/dcommon'
 
         , dtmp: 'modules/dtmp/0.1/dtmp'
     }

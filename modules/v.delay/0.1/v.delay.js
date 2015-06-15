@@ -24,6 +24,28 @@
 
                 return _timeName;
             }
+        , clear: 
+            function( _timeName ){
+                this.clearTimeout( _timeName );
+                this.clearInterval( _timeName );
+                return this;
+            }
+        , clearTimeout:
+            function( _timeName ){
+                this.timeoutItems[ _timeName ] 
+                    && ( clearTimeout( this.timeoutItems[_timeName ]  )
+                         , delete this.timeoutItems[ _timeName ]
+                     );
+                return this;
+            }
+        , clearInterval:
+            function( _timeName ){
+                this.intervalItems[ _timeName ]
+                    && ( clearInterval( this.intervalItems[_timeName ]  )
+                         , delete this.intervalItems[ _timeName ]
+                     );
+                return this;
+            }
     };
 });}( typeof define === 'function' && define.amd ? define : 
         function ( _name, _require, _cb ) { 
