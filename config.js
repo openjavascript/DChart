@@ -18,6 +18,7 @@ requirejs.config( {
 
         , 'V.log': 'modules/v.log/0.1/v.log'
         , 'V.delay': 'modules/v.delay/0.1/v.delay'
+        , 'jquery.thfreeze': 'modules/jquery.thfreeze/0.1/jquery.freeze'
 
         , vcommon: 'modules/vcommon/0.1/vcommon'
 
