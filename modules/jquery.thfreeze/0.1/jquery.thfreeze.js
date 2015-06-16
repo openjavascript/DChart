@@ -1,9 +1,11 @@
+//ie8+
 ;(function(define, _win) { 'use strict'; define( 'jquery.thfreeze', [ 'underscore', 'V.log' , 'jquery.browser' ], function( _, Log ){
 
     $.fn.thfreeze = function( _opt ){
         var  _opts = $.extend( {
             ieFirstThPlus: -1
             , ieTopPlus: -1
+            , ieLeftPlus: 1
         }, _opt ), _p = this;
 
         _p.each( function( _ix, _item ){
@@ -56,14 +58,15 @@
     };
 
     function updatePosition( _thead, _cthead, _item, _opts ){
-        var _thoffset, _topPlus = 0;
+        var _thoffset, _topPlus = 0, _leftPlus = 0;
 
-        $.browser.msie && ( _topPlus = _opts.ieTopPlus );
+        $.browser.msie && ( $.browser.mode > 8 ) && ( _topPlus = _opts.ieTopPlus );
+        $.browser.msie && ( $.browser.mode < 9 ) && ( _leftPlus = _opts.ieLeftPlus );
 
         _thoffset = _thead.offset();
         _cthead.css( {
             top: _thoffset.top + _item.scrollTop() + _topPlus + 'px'
-            , left: _thoffset.left + _item.scrollLeft() + 'px'
+            , left: _thoffset.left + _item.scrollLeft() + _leftPlus + 'px'
             //, display: 'none'
             , display: 'block'
         });

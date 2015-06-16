@@ -20,7 +20,7 @@ requirejs.config( {
         , 'V.delay': 'modules/v.delay/0.1/v.delay'
 
         , 'jquery.browser': 'modules/jquery.browser/0.1/jquery.browser'
-        , 'jquery.thfreeze': 'modules/jquery.thfreeze/0.1/jquery.freeze'
+        , 'jquery.thfreeze': 'modules/jquery.thfreeze/0.1/jquery.thfreeze'
 
         , vcommon: 'modules/vcommon/0.1/vcommon'
 

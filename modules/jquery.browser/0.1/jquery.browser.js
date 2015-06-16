@@ -6,6 +6,7 @@
     jQuery.browser.webkit = false;  
     jQuery.browser.opera = false;  
     jQuery.browser.msie = false;  
+    jQuery.browser.mode = document.documentMode || 0;
 
     var nAgt = navigator.userAgent;  
     jQuery.browser.name = navigator.appName;  
