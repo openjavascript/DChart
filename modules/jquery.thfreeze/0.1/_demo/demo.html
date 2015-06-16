@@ -34,13 +34,36 @@
         padding: 5px 2px;
     }
 
+    .thfreeze_old_head th {
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff; 
+    }
+    .thfreeze_head {
+        background: #fff;
+    }
+    .thfreeze_head th:nth-of-type(1) {
+        border-left: 1px solid #999999; 
+    }
+    .thfreeze_head th {
+        border-bottom: 1px solid #999999; 
+    }
+    .table-auto-height tbody tr:last-child td {
+        border-bottom: 1px solid #999999;
+    }
+    .table-auto-height table {
+        border-top: 1px solid #fff;
+    }
+    .table-auto-height tbody tr:last-child td:first-child {
+        border-bottom: 0px solid #999999;
+    }
+
 </style>
 </head>    
 <body>
     <div style="height: 200px;"></div>
 
     <div id="table_structure" class="table-auto-height">
-        <table class="yt-t4" data-reactid=".0">
+        <table class="yt-t4" data-reactid=".0" style="width: 100%;">
             <thead data-reactid=".0.0">
                 <tr data-reactid=".0.0.0">
                     <th width="25%" data-reactid=".0.0.0.0">字段名</th>
