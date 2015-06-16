@@ -42,6 +42,14 @@
                 position: 'absolute'
                 , display: 'none'
             });
+
+            if( _cthead.is( '[data-reactid]' ) ){
+                _cthead.is( '[data-reactid]' ) && _cthead.removeAttr( 'data-reactid' );
+                _cthead.find( '*' ).each( function( _six, _sitem ){
+                    _sitem = $( _sitem );
+                    _sitem.is( '[data-reactid]' ) && _sitem.removeAttr( 'data-reactid' );
+                });
+            }
             _thead.css( { visibility: 'hidden' } );
 
             _cthead.appendTo( _table );
