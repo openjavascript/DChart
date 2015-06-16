@@ -28,6 +28,12 @@
         jQuery.browser.name = "Microsoft Internet Explorer";  
         jQuery.browser.fullVersion = nAgt.substring(verOffset+5);  
     }  
+    else if ((verOffset=nAgt.indexOf("Trident"))!=-1) {  
+        jQuery.browser.msie = true;  
+        jQuery.browser.name = "Microsoft Internet Explorer";  
+        jQuery.browser.fullVersion = nAgt.substring(verOffset+5);  
+        jQuery.browser.majorVersion = 11;
+    }  
     // In Chrome, the true version is after "Chrome"  
     else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {  
         jQuery.browser.webkit = true;  

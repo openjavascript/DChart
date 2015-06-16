@@ -64,6 +64,7 @@
         $.browser.msie && ( $.browser.mode < 9 ) && ( _leftPlus = _opts.ieLeftPlus );
 
         _thoffset = _thead.offset();
+        //_thoffset = _thead.position();
         _cthead.css( {
             top: _thoffset.top + _item.scrollTop() + _topPlus + 'px'
             , left: _thoffset.left + _item.scrollLeft() + _leftPlus + 'px'
